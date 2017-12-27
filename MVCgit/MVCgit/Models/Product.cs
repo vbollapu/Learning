@@ -14,5 +14,7 @@ namespace MVCgit.Models
 
         [MaxLength(15)]
         public string ProductName { get; set; }
+
+        public string productbar {get; set;}
     }
 }
