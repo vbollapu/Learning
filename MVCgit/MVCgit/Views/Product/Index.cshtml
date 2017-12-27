@@ -1,10 +1,10 @@
 ﻿@model MVCgit.Models.Product
 
 @{
-    ViewBag.Title = "Product Management";
+    ViewBag.Title = "Index";
 }
 
-<h2>Product Management</h2>
+<h2>Index</h2>
 
 
 @using (Html.BeginForm()) 
@@ -20,6 +20,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.productbar, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.productbar, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.productbar, "", new { @class = "text-danger" })
             </div>
         </div>
 
